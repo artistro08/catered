@@ -14,7 +14,7 @@ handle = "Content\Settings"
                position-relative"
 >
     <div class="{{ section.container_style }}">
-        <div class="row row-cols-lg-{{ section.columns|length }} row-cols-1 mx-auto {{ section.reverse_columns_on_mobile ? 'flex-lg-row flex-column-reverse' }}">
+        <div class="row row-cols-lg-{{ section.columns|length }} row-cols-1 mx-auto {{ section.reverse_columns_on_mobile ? 'flex-lg-row flex-column-reverse' }} {{ section.center_columns_vertically ? 'align-items-center' }}">
             {% for column in section.columns %}
                 <div
                     {{ column.html_anchor|length ? 'id=' ~  column.html_anchor  ~ '' }}
