@@ -21,3 +21,33 @@ fields:
     comment: Add card styling to column
     span: right
     tab: Style
+  display_icon:
+    type: switch
+    label: Display an Icon
+    comment: Add an icon at the top of the column. Also adds a divider
+    span: left
+    cssClass: mt-4
+    tab: Style
+  icon:
+    type: entries
+    label: Icon
+    source: Content\Icon
+    displayMode: recordfinder
+    maxItems: 1
+    commentAbove: Choose an Icon from the database
+    tab: Style
+    span: right
+    trigger:
+      action: show
+      condition: checked
+      field: display_icon
+  hide_divider:
+    type: switch
+    label: Hide Icon Divider
+    comment: Hide the divider that displays after the icon.
+    span: left
+    tab: Style
+    trigger:
+      action: show
+      condition: checked
+      field: display_icon
