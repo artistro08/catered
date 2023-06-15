@@ -1,0 +1,24 @@
+uuid: 73913cb2-18bd-4e1e-9c0a-4600b4abec7c
+handle: Content\ServicesCommonFields
+type: mixin
+name: Frequently Asked Questions Fields
+fields:
+  limit:
+    type: number
+    default: 0
+    label: Limit
+    commentAbove: Limit the number of Services displayed. Set to 0 for unlimited.
+    span: left
+    tab: Style
+  per_row:
+    type: dropdown
+    tab: Style
+    label: Services per Row
+    commentAbove: The number of Services that appear in a Row
+    span: right
+    options:
+      '1': '1 Per Row'
+      '2': '2 Per Row'
+      '3': '3 Per Row'
+      '4': '4 Per Row'
+      '5': '5 Per Row'

@@ -1,0 +1,32 @@
+[collection services]
+handle = "Content\Services"
+==
+{% set services = services %}
+
+{% if column.limit != 0 %}
+    {% set services = services.take(column.limit).get() %}
+{% endif %}
+
+{% if services|length %}
+    <div class="row row-cols-1 row-cols-lg-{{ column.per_row }} mb-4">
+        {% for service in services %}
+            <div class="col text-center">
+                <div class="service-container">
+                    {% if service.icon|length %}
+                        <div class="service-icon-container">
+                            <div class="service-icon">
+                                {{ service.icon.svg_code|raw }}
+                            </div>
+                        </div>
+                    <hr class="w-100">
+                    {% endif %}
+                    <h3>{{ service.title }}</h3>
+                    <p class="text-center">
+                        {{ service.short_description }}
+                    </p>
+                    <a href="{{ 'service'|page({slug: service.slug}) }}" class="btn btn-secondary btn-sm" type="button">Learn More</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

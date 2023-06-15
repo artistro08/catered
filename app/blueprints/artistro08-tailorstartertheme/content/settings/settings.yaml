@@ -30,6 +30,14 @@ fields:
     spanClass: col-12 col-lg-6
     commentAbove: The name of the website. Used in the footer and in the header if no logo is set
     permissions: tailor.entry.698afed670f147dd9dcfdc2a0f903ff2
+  contact_page:
+    label: Contact Page
+    span: row
+    spanClass: col-12
+    tab: Settings
+    type: pagefinder
+    singleMode: true
+    commentAbove: Select the Contact Us Page. Used for the services "Contact Us" button.
   favicon:
     type: mediafinder
     mode: image

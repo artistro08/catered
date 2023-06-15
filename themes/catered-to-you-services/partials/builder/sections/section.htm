@@ -62,9 +62,14 @@ handle = "Content\Settings"
                         {% endif %}
                     {% endif %}
 
-                    {# Form Column Group #}
+                    {# FAQ Column Group #}
                     {% if column.content_group == "faqs" %}
                         {% partial 'builder/columns/faqs' column = column %}
+                    {% endif %}
+
+                    {# Services Column Group #}
+                    {% if column.content_group == "services" %}
+                        {% partial 'builder/columns/services' column = column %}
                     {% endif %}
 
                     {# Shop Column Group #}

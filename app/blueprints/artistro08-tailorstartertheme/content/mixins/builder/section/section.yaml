@@ -177,6 +177,16 @@ fields:
           search:
             type: mixin
             source: Content\FAQsColumn
+      services:
+        name: Services
+        icon: icon-cutlery
+        description: Column with Services
+        titleFrom: title
+        useTabs: true
+        fields:
+          search:
+            type: mixin
+            source: Content\ServicesColumn
       form:
         name: Form
         icon: icon-list-alt
