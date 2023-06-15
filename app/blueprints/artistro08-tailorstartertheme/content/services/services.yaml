@@ -1,0 +1,54 @@
+uuid: dc2781a2-d122-43bc-8656-d9779af9f669
+handle: Content\Services
+type: structure
+name: Services
+drafts: false
+multisite: sync
+pagefinder: false
+
+primaryNavigation:
+  label: FAQs
+  icon: icon-cutlery
+  order: 147
+
+structure:
+  maxDepth: 2
+
+customMessages:
+  buttonCreate: New Service
+
+fields:
+  content:
+    label: Content
+    type: richeditor
+    span: adaptive
+    tab: Edit
+  icon:
+    label: Icon
+    type: entries
+    maxItems: 1
+    displayMode: recordfinder
+    span: full
+    source: Content\Icon
+    commentAbove: The icon related to the question/answer pair
+    scope: false
+    tab: Manage
+    column:
+      type: partial
+      path: "#/artistro08-tailorstartertheme/partials/columns/_list_icon"
+  short_description:
+    label: Short Description
+    commentAbove: The short description of the service. Used in blocks
+    type: textarea
+    span: full
+    tab: Manage
+  seo_fields:
+    tab: Manage
+    type: mixin
+    name: SEO Fields
+    source: Content\SEOFields
+  code_fields:
+    tab: Manage
+    type: mixin
+    name: SEO Fields
+    source: Content\CodeFields
