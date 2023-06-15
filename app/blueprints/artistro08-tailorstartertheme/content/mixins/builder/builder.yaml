@@ -74,6 +74,16 @@ fields:
           search:
             type: mixin
             source: Content\FAQs
+      services:
+        name: Services
+        icon: icon-cutlery
+        description: Section with Services.
+        titleFrom: title
+        useTabs: true
+        fields:
+          search:
+            type: mixin
+            source: Content\ServicesSection
       form:
         name: Form
         icon: icon-list-alt

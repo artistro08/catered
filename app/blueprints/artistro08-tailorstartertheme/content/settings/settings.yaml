@@ -30,6 +30,14 @@ fields:
     spanClass: col-12 col-lg-6
     commentAbove: The name of the website. Used in the footer and in the header if no logo is set
     permissions: tailor.entry.698afed670f147dd9dcfdc2a0f903ff2
+  contact_page:
+    label: Contact Page
+    span: row
+    spanClass: col-12
+    tab: Settings
+    type: pagefinder
+    singleMode: true
+    commentAbove: Select the Contact Us Page. Used for the services "Contact Us" button.
   favicon:
     type: mediafinder
     mode: image
@@ -104,7 +112,7 @@ fields:
     commentAbove: The default search page. Used if no page is set in a search block.
     displayMode: recordfinder
     permissions: tailor.entry.698afed670f147dd9dcfdc2a0f903ff2
-    validation: 
+    validation:
       - required_if:enable_search,1
     conditions: content_group = 'search'
     trigger:
@@ -130,7 +138,7 @@ fields:
     tab: Search
     quickselect: true
     permissions: tailor.entry.698afed670f147dd9dcfdc2a0f903ff2
-    options: 
+    options:
       pages: Pages
       posts: Blog Posts
       events: Events
@@ -164,6 +172,7 @@ fields:
     options:
       position-relative: Scroll With Content
       sticky-top: Stick to Top of Screen
+      fixed-top: Fix to Top of Screen
   navbar_advanced_options:
     type: switch
     label: Show Advanced Settings
@@ -175,7 +184,7 @@ fields:
     commentAbove: Specify CSS classes for the navbar. Separate them with a comma.
     span: full
     tab: Global Elements
-    trigger: 
+    trigger:
       action: empty|hide
       field: navbar_advanced_options
       condition: unchecked
@@ -187,7 +196,7 @@ fields:
     validation: alpha_dash
     span: full
     tab: Global Elements
-    trigger: 
+    trigger:
       action: empty|hide
       field: navbar_advanced_options
       condition: unchecked
@@ -197,10 +206,10 @@ fields:
     commentAbove: Choose the navbar container style. Pick "Fluid" for full width.
     tab: Global Elements
     span: full
-    options: 
+    options:
       container: Normal
       container-fluid: Fluid
-    trigger: 
+    trigger:
       action: empty|hide|fill[container]
       field: navbar_advanced_options
       condition: unchecked
@@ -223,7 +232,7 @@ fields:
     commentAbove: Specify CSS classes for the footer. Separate them with a comma.
     span: full
     tab: Global Elements
-    trigger: 
+    trigger:
       action: empty|hide
       field: footer_advanced_options
       condition: unchecked
@@ -235,7 +244,7 @@ fields:
     validation: alpha_dash
     span: full
     tab: Global Elements
-    trigger: 
+    trigger:
       action: empty|hide
       field: footer_advanced_options
       condition: unchecked
@@ -245,14 +254,14 @@ fields:
     commentAbove: Choose the footer container style. Pick "Fluid" for full width.
     tab: Global Elements
     span: full
-    options: 
+    options:
       container: Normal
       container-fluid: Fluid
-    trigger: 
+    trigger:
       action: empty|hide|fill[container]
       field: footer_advanced_options
       condition: unchecked
-  
+
   header_code:
     label: Header Code
     type: codeeditor
@@ -1002,7 +1011,7 @@ fields:
     commentAbove: Specify an email to send email notifications to. Form Submissions & Shop Orders default to this email
     tab: Mail Notifications
     span: left
-    permissions: 
+    permissions:
       - tailor.entry.f04b58ea6d8011edaa98d348ccf890ef
       - tailor.entry.2a9a76d0010c11ed90b6fc95f7401555
     validation:
@@ -1016,7 +1025,7 @@ fields:
     tab: Mail Notifications
     commentAbove: The name of the person receiving the notification email. Form Submissions & Shop Orders default to this name
     span: right
-    permissions: 
+    permissions:
       - tailor.entry.f04b58ea6d8011edaa98d348ccf890ef
       - tailor.entry.2a9a76d0010c11ed90b6fc95f7401555
     validation:

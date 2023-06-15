@@ -11,6 +11,13 @@ fields:
     comment: Useful if you have content that needs to be stacked a different way on a phone.
     type: switch
     tab: Style
+    span: left
+  center_columns_vertically:
+    type: switch
+    label: Center Columns Vertically
+    comment: Center the columns in this section vertically
+    span: right
+    tab: Style
   columns:
     label: Content
     type: repeater
@@ -106,6 +113,15 @@ fields:
             span: full
             tab: General
             singleMode: true
+          image_shape:
+            label: Image Shape
+            type: dropdown
+            commentAbove: Change the image shape
+            span: full
+            tab: Style
+            options:
+              normal: Normal
+              circle: Circle
           external_link:
             label: External link
             comment: Open in new tab
@@ -161,6 +177,16 @@ fields:
           search:
             type: mixin
             source: Content\FAQsColumn
+      services:
+        name: Services
+        icon: icon-cutlery
+        description: Column with Services
+        titleFrom: title
+        useTabs: true
+        fields:
+          search:
+            type: mixin
+            source: Content\ServicesColumn
       form:
         name: Form
         icon: icon-list-alt

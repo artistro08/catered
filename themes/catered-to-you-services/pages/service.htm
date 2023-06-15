@@ -1,0 +1,75 @@
+url = "/service/:slug"
+layout = "services"
+title = "Service"
+
+[section]
+handle = "Content\Services"
+entrySlug = "{{ :slug }}"
+entryDefault = 1
+
+[global settings]
+handle = "Content\Settings"
+==
+<?php
+function onInit() {
+    $request = request()->get('session_id');
+
+    if($request) {
+        Session::forget('cart_items');
+    }
+}
+?>
+==
+{% set service = section %}
+
+{% put header_code %}
+    {{ service.header_code|raw }}
+{% endput %}
+
+{% put body_code %}
+    {{ service.body_code|raw }}
+{% endput %}
+
+{% put footer_code %}
+    {{ service.footer_code|raw }}
+{% endput %}
+
+{% if service is empty %}
+    {% do abort('404') %}
+{% else %}
+    <header class="hero">
+        {% if service.image|length %}
+            <div class="hero-media">
+                <img class="hero-image" src="{{ service.image|media|resize(1920) }}">
+            </div>
+        {% endif %}
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7 mx-auto">
+                    {% if service.icon|length %}
+                    <div class="service-container">
+                        <div class="service-icon-container">
+                            <div class="service-icon">
+                                {{ service.icon.svg_code|raw }}
+                            </div>
+                        </div>
+                        <hr class="w-100">
+                    </div>
+                    {% endif %}
+                    <h1 class="text-center">{{ service.title }}</h1>
+                    <p class="text-center">{{ service.short_description }}</p>
+                    {% if settings.contact_page|length %}
+                        <div class="text-center">
+                            <a href="{{ settings.contact_page|link }}" class="btn btn-primary">Contact Us</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            {{ service.content|raw }}
+        </div>
+    </section>
+{% endif %}

@@ -28,13 +28,23 @@ fields:
           type: dropdown
           label: Style
           commentAbove: Change the style of this button.
-          span: full
+          span: left
           default: value[primary]
           options:
             primary: Primary
             secondary: Secondary
             light: Light
             dark: Dark
+        size:
+          type: dropdown
+          label: Size
+          commentAbove: Change the Size of this button.
+          span: right
+          default: value[normal]
+          options:
+            normal: Normal
+            lg: Large
+            sm: Small
         outline:
           type: switch
           label: Outline this button

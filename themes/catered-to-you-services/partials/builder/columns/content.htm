@@ -1,0 +1,21 @@
+{% if column.display_icon %}
+    <div class="service-container">
+        <div class="service-icon-container">
+            <div class="service-icon">
+                {{ column.icon.svg_code|raw }}
+            </div>
+        </div>
+        {% if not column.hide_divider %}
+            <hr class="w-100">
+        {% endif %}
+        {{ column.content|content }}
+        {% if column.buttons|length %}
+            {% partial 'builder/globals/buttons' section = column %}
+        {% endif %}
+    </div>
+{% else %}
+    {{ column.content|content }}
+    {% if column.buttons|length %}
+        {% partial 'builder/globals/buttons' section = column %}
+    {% endif %}
+{% endif %}
