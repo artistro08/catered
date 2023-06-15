@@ -7,7 +7,7 @@ multisite: sync
 pagefinder: false
 
 primaryNavigation:
-  label: FAQs
+  label: Services
   icon: icon-cutlery
   order: 147
 
@@ -28,7 +28,7 @@ fields:
     type: entries
     maxItems: 1
     displayMode: recordfinder
-    span: full
+    span: left
     source: Content\Icon
     commentAbove: The icon related to the question/answer pair
     scope: false
@@ -36,6 +36,14 @@ fields:
     column:
       type: partial
       path: "#/artistro08-tailorstartertheme/partials/columns/_list_icon"
+  image:
+    tab: Manage
+    label: Image
+    commentAbove: An image to represent this service. Used on the top section of this page.
+    type: mediafinder
+    mode: image
+    maxItems: 1
+    span: right
   short_description:
     label: Short Description
     commentAbove: The short description of the service. Used in blocks
